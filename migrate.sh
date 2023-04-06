@@ -2,10 +2,10 @@ set -x
 sudo mkdir -p /opt/lokal/base
 sudo chown -R ubuntu:ubuntu /opt/lokal
 
-mkdir -p /opt/lokal/base/mysql
-if [ ! -e /opt/lokal/base/mysql/data ]; then
-sudo cp -r /var/lib/docker/volumes/mysql/_data /opt/lokal/base/mysql/data
-sudo chown -R ubuntu:ubuntu /opt/lokal/base/mysql/data
+mkdir -p /opt/lokal/base/mariadb
+if [ ! -e /opt/lokal/base/mariadb/data ]; then
+sudo cp -r /var/lib/docker/volumes/mysql/_data /opt/lokal/base/mariadb/data
+sudo chown -R ubuntu:ubuntu /opt/lokal/base/mariadb/data
 fi
 
 mkdir -p /opt/lokal/wordpress
